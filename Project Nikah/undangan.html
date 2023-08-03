@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Deden & Elvrida</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Niconne&display=swap">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <!------------------------- NAVIGASI ------------------------->
+    <nav class="navbar">
+        <div class="navbar_wrapper">
+            <h1 class="brand">Deden & Elvrida</h1>
+            <menu class="navbar_menu">
+                <a href="#akad">Akad</a>
+                <a href="#resepsi">Resepsi</a>
+                <a href="#buku_tamu ">RSVD</a>
+                <a href="#map">Map</a>
+                <a href="#gallery">Gallery</a>
+            </menu>
+        </div>
+    </nav>
+    <!------------------------- END NAVIGASI ------------------------->
+
+    <!------------------------- HERO ------------------------->
+    <div class="hero">
+        <h2>Pernikahan</h2>
+        <h1>Deden & Elvrida</h1>
+        <h3>Palabuhanratu, 20 Agustus 2023</h3>
+    </div>
+    <!------------------------- END HERO ------------------------->
+
+    <!------------------------- SECTION AKAD ------------------------->
+    <section id="akad">
+        <div class="bingkai">
+            <div class="line"></div>
+            <h1>Akad</h1>
+            <div class="line"></div>
+        </div>
+        <div class="section_wrap wrap">
+            <div class="section_container_akad container">
+                <h3>Sabtu, 20 Agustus 2023</h3>
+                <h3>Pukul: 08.00 WIB</h3>
+                <h4>KP. Babakan anyar RT 01 RW 20</h4>
+                <h4>Palabuhanratu</h4>
+            </div>
+            <section class="akad_img"></section>
+        </div>
+    </section>
+    <!------------------------- END SECTION AKAD ------------------------->
+    <div class="bouquet_container">
+        <img class="bouquet" src="https://cdn.pixabay.com/photo/2020/09/01/18/13/background-5535928_960_720.png"
+            alt="" />
+    </div>
+
+    <!------------------------- SECTION RESEPSI ------------------------->
+    <section id="resepsi">
+        <div class="bingkai">
+            <div class="line"></div>
+            <h1>Resepsi</h1>
+            <div class="line"></div>
+        </div>
+        <div class="section_wrap wrap">
+            <section class="resepsi_img"></section>
+            <div class="section_container_resepsi">
+                <h3>Minggu, 21 Agustus 2023</h3>
+                <h3>Pukul: 09.00 WIB s/d selesai</h3>
+                <h4>Gedung Prinanda Jajaway</h4>
+                <h4>Palabuhanratu</h4>
+            </div>
+        </div>
+    </section>
+    <!------------------------- END SECTION RESEPSI ------------------------->
+
+    <img class="bouquet2" src="https://cdn.pixabay.com/photo/2016/06/27/14/42/flowers-1482644_960_720.png" alt="" />
+
+    <!------------------------- SECTION BUKU TAMU ------------------------->
+    <section id="buku_tamu">
+        <div class="bingkai">
+            <div class="line"></div>
+            <h1>Buku Tamu</h1>
+            <div class="line"></div>
+        </div>
+        <div class="buku_tamu_container">
+            <form action="https://formspree.io/f/xleydnnp" method="post" onsubmit="return redirectToHomePage()">
+                <input required type="text" name="nama" placeholder="Nama" />
+                <textarea name="ucapan" placeholder="Ucapan & Doa" cols="30" rows="8"></textarea>
+                <select name="kehadiran">
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak_hadir">Tidak Hadir</option>
+                </select>
+
+                <!-- Informasi tentang mentransfer hadiah dan nomor rekening -->
+                <div class="qr-code-container">
+                    <!-- Ganti tombol dengan onclick event untuk menampilkan QR code -->
+                    <button type="button" onclick="showQRCode()" class="qr-code-button">Tampilkan Kode QR Bank
+                        Mandiri</button>
+                    <img id="qrCode" src="codeqr.jpg" alt="Kode QR Bank ABC" width="150" height="150"
+                        class="qr-code-image">
+                    <p class="qr-code-info" style="font-weight: bold; margin-bottom: 1px;">DEDEN HERRIYANTO</p>
+                </div>
+
+                <div class="btn">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+
+            <script>
+                function showQRCode() {
+                    var qrCodeImg = document.getElementById("qrCode");
+                    var qrCodeButton = document.querySelector(".qr-code-button");
+
+                    if (qrCodeImg.style.display === "none") {
+                        qrCodeImg.style.display = "block";
+                        qrCodeButton.textContent = "Sembunyikan Kode QR Bank ABC";
+                    } else {
+                        qrCodeImg.style.display = "none";
+                        qrCodeButton.textContent = "Tampilkan Kode QR Bank ABC";
+                    }
+                }
+            </script>
+
+        </div>
+    </section>
+    <!------------------------- END SECTION BUKU TAMU ------------------------->
+
+    <!------------------------- SECTION MAP ------------------------->
+    <section id="map">
+        <div class="bingkai">
+            <div class="line"></div>
+            <h1>Map</h1>
+            <div class="line"></div>
+        </div>
+        <div class="section_wrap wrap">
+            <div class="section_container_map">
+                <button class="map_list">
+                    <span class="material-symbols-outlined">Dapatkan Lokasi</span>
+                </button>
+                <button class="map_list">
+                    <span class="material-symbols-outlined">Save ke Calender</span>
+                </button>
+                <button class="map_list">
+                    <span class="material-symbols-outlined">Share Instagram</span>
+                </button>
+            </div>
+            <section class="map_img">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.2263159024424!2d106.55525506431248!3d-6.995377685048922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6827f48652ba4b%3A0x9dc97465446d8812!2sGedung%20Serbaguna%20Prinanda!5e0!3m2!1sid!2sid!4v1689836580951!5m2!1sid!2sid"
+                    width="550" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+        </div>
+    </section>
+    <!------------------------- END SECTION MAP ------------------------->
+
+    <!------------------------- SECTION GALLERY ------------------------->
+    <section id="gallery">
+        <div class="bingkai">
+            <div class="line"></div>
+            <h1>Gallery</h1>
+            <div class="line"></div>
+        </div>
+        <div class="selector_wrapper">
+            <div class="gallery_list">
+                <img src="https://images.pexels.com/photos/1128782/pexels-photo-1128782.jpeg?auto=compress&cs=tinysrgb&w=500&h=750&dpr=1"
+                    alt="gallery" />
+                <img
+                    src="https://images.unsplash.com/photo-1623428454614-abaf00244e52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
+                <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    alt="gallery" />
+                <img src="https://images.unsplash.com/photo-1525328302834-764f32276842?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                    alt="gallery" />
+                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    alt="gallery" />
+            </div>
+            <div class="gallery_list">
+                <img
+                    src="https://images.unsplash.com/photo-1582738412147-d29ca77b95cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" />
+                <img src="https://images.pexels.com/photos/2970287/pexels-photo-2970287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                    alt="gallery" />
+                <img src="https://images.unsplash.com/photo-1544577081-57925b5dccb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80"
+                    alt="gallery" />
+                <img src="https://images.unsplash.com/photo-1509927083803-4bd519298ac4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    alt="gallery" />
+            </div>
+        </div>
+    </section>
+    <!------------------------- END SECTION GALLERY ------------------------->
+
+    <!------------------------- FOOTER ------------------------->
+    <footer>
+        <p>Design By</p>
+        <h3>Deden Herriyanto</h3>
+    </footer>
+    <!------------------------- END FOOTER ------------------------->
+</body>
+<script>
+    function redirectToHomePage(event) {
+        event.preventDefault(); // Mencegah form dikirimkan langsung ke server
+
+        setTimeout(function () {
+            window.location.href = "https://undanganpernikahandoden.netlify.app/"; // Ganti URL halaman awal dengan URL yang sesuai
+        }, 3000); // Mengarahkan kembali ke halaman awal setelah 3 detik (3000 milidetik)
+    }
+
+    function showQRCode() {
+        var qrCodeImg = document.getElementById("qrCode");
+        var qrCodeButton = document.querySelector(".qr-code-button");
+
+        if (qrCodeImg.style.display === "none") {
+            qrCodeImg.style.display = "block";
+            qrCodeButton.textContent = "Sembunyikan Kode QR Bank ABC";
+        } else {
+            qrCodeImg.style.display = "none";
+            qrCodeButton.textContent = "Tampilkan Kode QR Bank ABC";
+        }
+    }
+</script>
+
+</html>
